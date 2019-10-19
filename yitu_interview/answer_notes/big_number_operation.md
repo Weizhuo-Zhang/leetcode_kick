@@ -109,5 +109,34 @@ string bigNumberAddInteger(string str_1, string str_2) {
 |     |      | 08 | 74 |
 | 2   | 删除和前面多余的0 | 8 | 774 |
 
+```c
+string bigNumberSubInteger(string str_1, string str_2, bool is_integer) {
+    string result = "";
+    string larger_str, smaller_str;
+    if (str_1 > str_2) {
+        larger_str  = str_1;
+        smaller_str = str_2;
+    } else {
+        result = "-";
+        larger_str  = str_2;
+        smaller_str = str_1;
+    }
+    for (int i = 0; i < larger_str.length(); i++) {
+        int num_1 = larger_str[i] - ZERO;
+        int num_2 = smaller_str[i] - ZERO;
+        if (num_1 - num_2 < 0) {
+            larger_str[i - 1] = larger_str[i - 1] - ZERO - 1 + ZERO;
+            larger_str[i] = (num_2 - num_1) + ZERO;
+        } else {
+            larger_str[i] = (num_1 - num_2) + ZERO;
+        }
+    }
+    if ((larger_str[0] == ZERO) && is_integer) {
+        larger_str.erase(0, 1);
+    }
+    result += larger_str;
+    return result;
+}
+```
 ## 大数乘法
 ## 大数除法
