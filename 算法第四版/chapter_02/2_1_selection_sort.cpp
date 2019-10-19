@@ -8,7 +8,7 @@ private:
 
     static bool less(Comparable v, Comparable w)
     {
-        
+
     }
 
     static ex
