@@ -3,4 +3,4 @@ project(util)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(util big_number_operation.cpp)
+add_executable(util big_number_operation.cpp spiral_matrix.cpp spriral_matrix_generator.cpp)
