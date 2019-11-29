@@ -106,3 +106,4 @@ venv.bak/
 # C++ 
 .idea/
 cmake-build-debug
+*.out
